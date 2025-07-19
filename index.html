@@ -1,13 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="js/script.js" defer></script>
     <title>Pomodoro Timer</title>
-</head>
-<body>
-    <h1>Pomodoro</h1>
-</body>
+  </head>
+  <body>
+    <div class="pomodoro-global-container">
+      <h1>Pomodoro</h1>
+
+      <!-- switching between 'pomodoro', 'short break' and 'long break' -->
+      <div class="choice-btns">
+        <p class="pomodoro-choice">pomodoro</p>
+        <p class="short-choice">short break</p>
+        <p class="long-choice">long break</p>
+      </div>
+
+      <div class="line"></div>
+
+      <!-- pomodoro timer -->
+      <div class="pomodoro-container">
+        <p class="pomodoro-timer">25:00</p>
+        <button class="pomodoro-btn">start</button>
+      </div>
+
+      <!-- short break -->
+      <div class="short-container hide">
+        <p class="short-timer">05:00</p>
+        <button class="pomodoro-btn">start</button>
+      </div>
+
+      <!-- long break -->
+      <div class="long-container hide">
+        <p class="long-timer">15:00</p>
+        <button class="pomodoro-btn">start</button>
+      </div>
+    </div>
+  </body>
 </html>

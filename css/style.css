@@ -1,0 +1,110 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+body {
+  background-color: #640000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+}
+button {
+  border: none;
+}
+.pomodoro-global-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+}
+.choice-btns {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+.choice-btns .pomodoro-choice,
+.choice-btns .short-choice,
+.choice-btns .long-choice {
+  text-transform: uppercase;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+.choice-btns .pomodoro-choice::after,
+.choice-btns .short-choice::after,
+.choice-btns .long-choice::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  border-radius: 1px;
+}
+.choice-btns .pomodoro-choice:hover::after,
+.choice-btns .short-choice:hover::after,
+.choice-btns .long-choice:hover::after {
+  width: 80%;
+}
+.line {
+  width: 55%;
+  height: 2px;
+  margin-top: -1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 1px;
+}
+.pomodoro-btn {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin-top: 2rem;
+  padding: 1rem 1.5rem;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: #ff0000;
+  box-shadow: 4px 4px 1px #640000;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.pomodoro-btn:hover {
+  font-size: 1.6rem;
+}
+.pomodoro-container,
+.short-container,
+.long-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+.pomodoro-timer,
+.short-timer,
+.long-timer {
+  font-size: 6rem;
+  color: #fff;
+  text-align: center;
+}
+.hide {
+  display: none;
+}
